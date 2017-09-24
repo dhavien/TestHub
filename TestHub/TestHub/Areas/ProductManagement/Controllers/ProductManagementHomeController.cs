@@ -4,11 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace TestHub.Controllers
+namespace TestHub.Areas.ProductManagement.Controllers
 {
-    public class ManageController : Controller
+    public class ProductManagementHomeController : Controller
     {
-        [HttpGet]
         public ActionResult Index()
         {
             return View();
