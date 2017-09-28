@@ -12,8 +12,8 @@ namespace TestHub.Models.DB
         public override void InitializeDatabase(TestHubContext context)
         {
             //Need this to kick out all of the other connections so we can actually use it
-            context.Database.ExecuteSqlCommand(
-                TransactionalBehavior.DoNotEnsureTransaction, string.Format("ALTER DATABASE [{0}] SET SINGLE_USER WITH ROLLBACK IMMEDIATE", context.Database.Connection.Database));
+            //context.Database.ExecuteSqlCommand(
+            //    TransactionalBehavior.DoNotEnsureTransaction, string.Format("ALTER DATABASE [{0}] SET SINGLE_USER WITH ROLLBACK IMMEDIATE", context.Database.Connection.Database));
 
             base.InitializeDatabase(context);
         }
